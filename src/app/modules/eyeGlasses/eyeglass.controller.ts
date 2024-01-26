@@ -10,18 +10,18 @@ const createEyeGlassProduct = catchAsyncFunction(async (req, res) => {
   sendSuccessResponse(res, {
     success: true,
     statusCode: httpStatus.OK,
-    message: "Product Created successfully",
+    message: "EyeGlass Product Created successfully",
     data: result,
   });
 });
 
 const getAllEyeGlassProduct = catchAsyncFunction(async (req, res) => {
-  const result = await EyeGlassServicesIntoDb.getAllProductIntoDB();
+  const result = await EyeGlassServicesIntoDb.getAllProductIntoDB(req.query);
 
   sendSuccessResponse(res, {
     success: true,
     statusCode: httpStatus.OK,
-    message: "Products retrieved successfully",
+    message: "EyeGlass Products retrieved successfully",
     data: result,
   });
 });
@@ -37,7 +37,7 @@ const updateEyeGlassProduct = catchAsyncFunction(async (req, res) => {
   sendSuccessResponse(res, {
     success: true,
     statusCode: httpStatus.OK,
-    message: "Products Updated successfully",
+    message: "EyeGlass Products Updated successfully",
     data: result,
   });
 });
@@ -48,7 +48,7 @@ const deleteEyeGlassProduct = catchAsyncFunction(async (req, res) => {
   sendSuccessResponse(res, {
     success: true,
     statusCode: httpStatus.OK,
-    message: "Products deleted successfully",
+    message: "EyeGlass Products deleted successfully",
     data: result,
   });
 });

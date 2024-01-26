@@ -14,4 +14,5 @@ router.post(
 );
 router.get("/get-all-sales", SalesControllers.getAllSalesEyeGlass);
 
+
 export const SalesRoutes = router;

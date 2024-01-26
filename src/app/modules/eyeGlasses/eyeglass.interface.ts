@@ -9,5 +9,5 @@ export interface Eyeglasses {
   priceRange?: number;
   gender?: string;
   color?: string;
-  // Add other relevant filter parameters
+
 }

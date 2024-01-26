@@ -1,8 +1,9 @@
 /* eslint-disable @typescript-eslint/no-this-alias */
 import bcrypt from "bcrypt";
 import { Schema, model } from "mongoose";
-import { TUser, UserModel } from "./interface";
+
 import config from "../../config";
+import { TUser, UserModel } from "./user.interface";
 
 const userSchema = new Schema<TUser, UserModel>(
   {

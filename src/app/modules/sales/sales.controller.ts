@@ -17,7 +17,7 @@ const createSalesEyeGlass = catchAsyncFunction(async (req, res) => {
 });
 
 const getAllSalesEyeGlass = catchAsyncFunction(async (req, res) => {
-  const result = await SalesServices.getAllSalesEyeIntoDB();
+  const result = await SalesServices.getAllSalesEyeIntoDB(req.query);
 
   sendSuccessResponse(res, {
     success: true,
@@ -27,4 +27,7 @@ const getAllSalesEyeGlass = catchAsyncFunction(async (req, res) => {
   });
 });
 
-export const SalesControllers = { createSalesEyeGlass, getAllSalesEyeGlass };
+export const SalesControllers = {
+  createSalesEyeGlass,
+  getAllSalesEyeGlass,
+};
